@@ -1,14 +1,28 @@
 version: "3"
 
 services:
+  postgres:
+    container_name: postgres_container
+    build:
+      context: ./postgres
+      dockerfile: postgres.dockerfile
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
   api:
+    container_name: api_container
     build:
       context: ./api
       dockerfile: api.dockerfile
     ports:
       - "8000:8000"
+    depends_on:
+      - postgres
 
   nginx:
+    container_name: nginx_container
     build:
       context: ./nginx
       dockerfile: nginx.dockerfile
