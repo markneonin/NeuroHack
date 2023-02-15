@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: api.dockerfile
+    ports:
+      - "8000:8000"
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: nginx.dockerfile
+    volumes:
+      - ./static/:/static
+    ports:
+      - "88:88"
+    depends_on:
+      - api
