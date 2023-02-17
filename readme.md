@@ -3,5 +3,3 @@ https://miro.com/welcomeonboard/MmdidW1SVHBSQWVKRnF2d2Vqc3RndG5ueUtUTFFhb05IdXRj
 
 ## Запуск
 docker-compose up
-
-##
