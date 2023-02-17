@@ -88,7 +88,7 @@ class Work(BaseModel):
     w: str
 
 
-class Exgauter(BaseModel):
+class Exgauster(BaseModel):
     bear_1: PodshExtend
     bear_2: PodshExtend
     bear_3: Podsh
@@ -99,11 +99,8 @@ class Exgauter(BaseModel):
     bear_8: PodshExtend
     bear_9: Podsh
     cooler: Coooler
-    gas_valve: GasValve
     gas_col: GasCol
     gas_valve: GasValve
     main_drive: MainDrive
     oil_sys: OilSys
     work: Work
-
-
