@@ -12,7 +12,7 @@ db = client.statistic
 signal = db['signal']
 
 async def create_indexes():
-    await signal.create_index([("name", ASCENDING)], expireAfterSeconds=3600)
+    await signal.create_index([("name", ASCENDING)], expireAfterSeconds=36000)
 
 
 async def write_to_mongo(objects):
