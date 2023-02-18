@@ -2,15 +2,22 @@ import asyncio
 
 import motor.motor_asyncio
 from bson import ObjectId
+from pymongo import ASCENDING
+
 
 STATISTIC_DB = "mongodb://user:password@0.0.0.0:27017"
 
 client = motor.motor_asyncio.AsyncIOMotorClient(STATISTIC_DB, serverSelectionTimeoutMS=5000)
 db = client.statistic
+signal = db['signal']
 
-#TODO создай табличку сигнал и повесь TTL индекс на 600*60 секунд
+async def create_indexes():
+    await signal.create_index([("name", ASCENDING)], expireAfterSeconds=3600)
+
+
 async def write_to_mongo(objects):
     await db.exgauster.insert_many(objects)
+    await create_indexes()
 
 
 objs = [
