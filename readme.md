@@ -4,4 +4,5 @@ https://miro.com/welcomeonboard/MmdidW1SVHBSQWVKRnF2d2Vqc3RndG5ueUtUTFFhb05IdXRj
 ## Запуск
 docker-compose up
 
-
+## ТЗ
+https://pgenesis.notion.site/d6ef73e9d00143fdbfa8a9b6143d2905
