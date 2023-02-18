@@ -83,7 +83,6 @@ if __name__ == '__main__':
     first = Bear(pods_7_6_ex, collection)
     second = Bear(pods_8_6_ex, collection)
     data_to_write.update({'6': first | second})
-    print(data_to_write)
-    data_to_write = {'1': 437.1247784706043, '2': 964.1784272821295, '3': 178.03486565955876, '4': 373.5651088206939, '5': 6270.0475032350205, '6': 9999.9}
+
     data_to_write.update({'predicted_at': datetime.datetime.now()})
     collection_write.insert_one(data_to_write)

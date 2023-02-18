@@ -31,6 +31,16 @@ services:
     depends_on:
       - mongo
 
+  predict_fail:
+    container_name: predict_fail_container
+    build:
+      context: ./predict_fail
+      dockerfile: predict_fail.dockerfile
+    volumes:
+      - ./constants/:/predict_fail/constants
+    depends_on:
+      - mongo
+
   api:
     container_name: api_container
     build:
