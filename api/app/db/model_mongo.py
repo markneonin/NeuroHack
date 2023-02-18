@@ -7,4 +7,5 @@ class Signal(BaseModel):
     key: str
     moment: str
     data: dict
+    exgauster: int
 
