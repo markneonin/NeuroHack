@@ -25,5 +25,5 @@ webSocketUrl: "wss://localhost:8001"
 - <b>(ws)/exgausters/{pk: int}/threads?date_start={date: DateTime}&date_start=</b> - отдает данные тредов по конкретной машине (история)
 
 {
-    desc: [{value: значение, date: момент}, {value: null, date: момент}]
+    ps: [id: int, description: {}, values: [{value: значение, date: момент}, {value: null, date: момент}]]
 }
