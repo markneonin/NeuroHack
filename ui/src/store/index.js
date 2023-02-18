@@ -9,8 +9,8 @@ export default new Vuex.Store({
     isAuthenticated: false,
     jwt: localStorage.getItem("token"),
     refreshJwt: localStorage.getItem("refresh_token"),
-    backendUrl: "/api",
-    webSocketUrl: "wss://109.172.27.159:8001"
+    backendUrl: "wss://localhost/api",
+    webSocketUrl: "wss://localhost:8001"
   },
 
   mutations: {
