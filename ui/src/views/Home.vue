@@ -1,57 +1,51 @@
 <template>
   <div class="home">
-    <div class="main-header flex-row-center">
-      <div class="logo-group">
-        <img src="@/assets/svg/logo.svg">
-      </div>
-      <div class="breadcrumbs">Прогнозная аналитика эксгаустеров</div>
-    </div>
+    <main-header></main-header>
     <div class="container components flex-column-start">
       <div class="section flex-column-start">
         <div class="header flex-row-center">
           <div class="icon flex-row-center">
             <img src="@/assets/svg/title-icon.svg">
           </div>
-          {{ title }}
+          <div class="header-text">{{ title }}</div>
         </div>
         <div class="legend">
           <div class="legend-icons">
             <div class="legend-item">
               <div class="legend-item-img">
-                Т
+                <div class="legend-item-text">Т</div>
                 <img src="@/assets/svg/legend-t.svg">
               </div>
-              Температура
+              <div class="legend-item-text">Температура</div>
             </div>
             <div class="legend-item">
               <div class="legend-item-img">
-                V
+                <div class="legend-item-text">V</div>
                 <img src="@/assets/svg/legend-v.svg">
               </div>
-              Вибрация
+              <div class="legend-item-text">Вибрация</div>
             </div>
             <div class="legend-item">
               <div class="legend-item-img">
-                L
+                <div class="legend-item-text">L</div>
                 <img src="@/assets/svg/legend-o.svg">
               </div>
-              Уровень масла
+              <div class="legend-item-text">Уровень масла</div>
             </div>
             <div class="legend-item">
               <img src="@/assets/svg/legend-d.svg">
-              Предупреждение
+              <div class="legend-item-text">Предупреждение</div>
             </div>
             <div class="legend-item">
               <img src="@/assets/svg/legend-a.svg">
-              Опасность
+              <div class="legend-item-text">Опасность</div>
             </div>
           </div>
         </div>
-
         <div class="container content flex-column-start">
           <div class="row">
             <div v-for="machine in machines" class="machine-section">
-              <div class="title">Агломашина № {{ machine.id }}</div>
+              <div class="machine-title">Агломашина № {{ machine.id }}</div>
               <div class="machine-section-content">
 
                 <div v-for="exhauster in machine.exhausters" class="card">
@@ -194,10 +188,11 @@
 
 <script>
 import axios from "axios";
+import mainHeader from "../components/header";
 
 export default {
   name: 'Home',
-  components: {},
+  components: {mainHeader},
 
   mixins: [],
 
@@ -394,4 +389,47 @@ export default {
 
 
 <style scoped>
+.machine-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+
+  width: 620px;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.machine-section-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 0;
+  gap: 10px;
+
+  border-radius: 0px 4px 4px 4px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.machine-title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 20px;
+  gap: 10px;
+
+  background: #F4F4F4;
+  border-radius: 4px 4px 0px 0px;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
 </style>
