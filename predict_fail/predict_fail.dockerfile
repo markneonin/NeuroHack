@@ -5,6 +5,15 @@ WORKDIR /statistic_consumer
 COPY requirements.txt /predict_fail
 RUN pip3 install -r requirements.txt
 
-ADD . /statistic_consumer
+ADD . /predict_fail
 
-CMD ["python3", "./app/statistic_consumer.py"]
+
+#Install Cron
+RUN apt-get update
+RUN apt-get -y install cron
+
+# Add the cron job
+RUN crontab -l | { cat; echo "*/10 * * * *  python3 ./app/predict_fail.py"; } | crontab -
+
+# Run the command on container startup
+CMD cron
