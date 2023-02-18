@@ -1,0 +1,4 @@
+kafka-python
+aiokafka
+motor
+python-dotenv
