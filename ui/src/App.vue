@@ -7,6 +7,7 @@
 
 
 <style>
+@import "./assets/css/style.css";
 @import "./assets/bootstrap/css/bootstrap.css";
 
 .main-section {
