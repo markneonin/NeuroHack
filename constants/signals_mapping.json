@@ -6534,7 +6534,7 @@
       }
    },
    "SM_Exgauster\\[0:38]":{
-      "exgauster":"3",
+      "exgauster":3,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6543,7 +6543,7 @@
       }
    },
    "SM_Exgauster\\[0:39]":{
-      "exgauster":"3",
+      "exgauster":3,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6552,7 +6552,7 @@
       }
    },
    "SM_Exgauster\\[0:40]":{
-      "exgauster":"3",
+      "exgauster":3,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6561,7 +6561,7 @@
       }
    },
    "SM_Exgauster\\[0:46]":{
-      "exgauster":"3",
+      "exgauster":3,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6570,7 +6570,7 @@
       }
    },
    "SM_Exgauster\\[0:55]":{
-      "exgauster":"4",
+      "exgauster":4,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6579,7 +6579,7 @@
       }
    },
    "SM_Exgauster\\[0:56]":{
-      "exgauster":"4",
+      "exgauster":4,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6588,7 +6588,7 @@
       }
    },
    "SM_Exgauster\\[0:57]":{
-      "exgauster":"4",
+      "exgauster":4,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6597,7 +6597,7 @@
       }
    },
    "SM_Exgauster\\[0:58]":{
-      "exgauster":"4",
+      "exgauster":4,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6606,7 +6606,7 @@
       }
    },
    "SM_Exgauster\\[1.0]":{
-      "exgauster":"3",
+      "exgauster":3,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6615,7 +6615,7 @@
       }
    },
    "SM_Exgauster\\[1.3]":{
-      "exgauster":"3",
+      "exgauster":3,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6624,7 +6624,7 @@
       }
    },
    "SM_Exgauster\\[1.4]":{
-      "exgauster":"3",
+      "exgauster":3,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6633,7 +6633,7 @@
       }
    },
    "SM_Exgauster\\[1.5]":{
-      "exgauster":"4",
+      "exgauster":4,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6642,7 +6642,7 @@
       }
    },
    "SM_Exgauster\\[1.8]":{
-      "exgauster":"4",
+      "exgauster":4,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6651,7 +6651,7 @@
       }
    },
    "SM_Exgauster\\[1.9]":{
-      "exgauster":"4",
+      "exgauster":4,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6660,7 +6660,7 @@
       }
    },
    "SM_Exgauster\\[2:38]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6669,7 +6669,7 @@
       }
    },
    "SM_Exgauster\\[2:39]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6678,7 +6678,7 @@
       }
    },
    "SM_Exgauster\\[2:40]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6687,7 +6687,7 @@
       }
    },
    "SM_Exgauster\\[2:46]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6696,7 +6696,7 @@
       }
    },
    "SM_Exgauster\\[2:55]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6705,7 +6705,7 @@
       }
    },
    "SM_Exgauster\\[2:56]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6714,7 +6714,7 @@
       }
    },
    "SM_Exgauster\\[2:57]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6723,7 +6723,7 @@
       }
    },
    "SM_Exgauster\\[2:58]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6732,7 +6732,7 @@
       }
    },
    "SM_Exgauster\\[2:63]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6741,7 +6741,7 @@
       }
    },
    "SM_Exgauster\\[2:64]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6750,7 +6750,7 @@
       }
    },
    "SM_Exgauster\\[3:38]":{
-      "exgauster":"5",
+      "exgauster":5,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6759,7 +6759,7 @@
       }
    },
    "SM_Exgauster\\[3:39]":{
-      "exgauster":"5",
+      "exgauster":5,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6768,7 +6768,7 @@
       }
    },
    "SM_Exgauster\\[3:40]":{
-      "exgauster":"5",
+      "exgauster":5,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6777,7 +6777,7 @@
       }
    },
    "SM_Exgauster\\[3:46]":{
-      "exgauster":"5",
+      "exgauster":5,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6786,7 +6786,7 @@
       }
    },
    "SM_Exgauster\\[3:55]":{
-      "exgauster":"6",
+      "exgauster":6,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6795,7 +6795,7 @@
       }
    },
    "SM_Exgauster\\[3:56]":{
-      "exgauster":"6",
+      "exgauster":6,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6804,7 +6804,7 @@
       }
    },
    "SM_Exgauster\\[3:57]":{
-      "exgauster":"6",
+      "exgauster":6,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6813,7 +6813,7 @@
       }
    },
    "SM_Exgauster\\[3:58]":{
-      "exgauster":"6",
+      "exgauster":6,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6822,7 +6822,7 @@
       }
    },
    "SM_Exgauster\\[4.0]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6831,7 +6831,7 @@
       }
    },
    "SM_Exgauster\\[4.3]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6840,7 +6840,7 @@
       }
    },
    "SM_Exgauster\\[4.4]":{
-      "exgauster":"1",
+      "exgauster":1,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6849,7 +6849,7 @@
       }
    },
    "SM_Exgauster\\[4.5]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6858,7 +6858,7 @@
       }
    },
    "SM_Exgauster\\[4.8]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6867,7 +6867,7 @@
       }
    },
    "SM_Exgauster\\[4.9]":{
-      "exgauster":"2",
+      "exgauster":2,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6876,7 +6876,7 @@
       }
    },
    "SM_Exgauster\\[5.0]":{
-      "exgauster":"5",
+      "exgauster":5,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6885,7 +6885,7 @@
       }
    },
    "SM_Exgauster\\[5.3]":{
-      "exgauster":"5",
+      "exgauster":5,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6894,7 +6894,7 @@
       }
    },
    "SM_Exgauster\\[5.4]":{
-      "exgauster":"5",
+      "exgauster":5,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6903,7 +6903,7 @@
       }
    },
    "SM_Exgauster\\[5.5]":{
-      "exgauster":"6",
+      "exgauster":6,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6912,7 +6912,7 @@
       }
    },
    "SM_Exgauster\\[5.8]":{
-      "exgauster":"6",
+      "exgauster":6,
       "description":{
          "Device":null,
          "Current metrics":null,
@@ -6921,7 +6921,7 @@
       }
    },
    "SM_Exgauster\\[5.9]":{
-      "exgauster":"6",
+      "exgauster":6,
       "description":{
          "Device":null,
          "Current metrics":null,
