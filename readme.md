@@ -22,4 +22,8 @@ webSocketUrl: "wss://localhost:8001"
 
 - <b>/exgausters</b> - отдает все данные о всех машинах (текущие)
 - <b>/exgausters/{pk: int}</b> - отдает все данные по конкретной машине (текущие)
-- <b>/exgausters/{pk: int}/threads</b> - отдает данные тредов по конкретной машине (история)
+- <b>(ws)/exgausters/{pk: int}/threads?date_start={date: DateTime}&date_start=</b> - отдает данные тредов по конкретной машине (история)
+
+{
+    ps: [id: int, description: {}, values: [{value: значение, date: момент}, {value: null, date: момент}]]
+}
