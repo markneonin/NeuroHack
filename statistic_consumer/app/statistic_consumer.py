@@ -9,6 +9,8 @@ import motor.motor_asyncio
 from aiokafka import AIOKafkaConsumer
 from dotenv import load_dotenv
 
+from signals_mapping import prediction_keys
+
 dotenv_path = Path('./constants/.env')
 load_dotenv(dotenv_path=dotenv_path)
 
@@ -114,9 +116,23 @@ async def consume():
             async for msg in consumer:
                 print(msg.offset)
                 tg.create_task(handle_message(msg.value, exgausters))
-
+                tg.create_task(parse_signals(msg = json.loads(msg.decode())))
     finally:
         await consumer.stop()
+
+
+async def parse_signals(msg):
+    timestamp = datetime.datetime.fromisoformat(msg.pop('moment'))
+
+    signals = [
+        {
+            'key': code,
+            'moment': timestamp,
+            'value': value,
+        }
+        for code, value in msg.items() if code in prediction_keys
+    ]
+    await db.signal.insert_many(signals)
 
 
 if __name__ == '__main__':
