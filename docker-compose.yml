@@ -11,6 +11,16 @@ services:
     ports:
       - "5432:5432"
 
+  mongo:
+    container_name: mongo_container
+    build:
+      context: ./mongo
+      dockerfile: mongo.dockerfile
+    volumes:
+        - ./mongo/data:/data/db
+    ports:
+      - "27017:27017"
+
   api:
     container_name: api_container
     build:
@@ -19,6 +29,7 @@ services:
     ports:
       - "8000:8000"
     depends_on:
+      - mongo
       - postgres
 
   nginx:
