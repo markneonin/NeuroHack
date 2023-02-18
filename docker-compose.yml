@@ -21,15 +21,15 @@ services:
     ports:
       - "27017:27017"
 
-#  statistic_consumer:
-#    container_name: statistic_consumer_container
-#    build:
-#      context: ./statistic_consumer
-#      dockerfile: statistic_consumer.dockerfile
-#    volumes:
-#      - ./constants/:/statistic_consumer/constants
-#    depends_on:
-#      - mongo
+  statistic_consumer:
+    container_name: statistic_consumer_container
+    build:
+      context: ./statistic_consumer
+      dockerfile: statistic_consumer.dockerfile
+    volumes:
+      - ./constants/:/statistic_consumer/constants
+    depends_on:
+      - mongo
 
   api:
     container_name: api_container
