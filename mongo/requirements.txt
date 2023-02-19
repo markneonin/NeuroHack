@@ -1,3 +1,4 @@
 asyncio
 motor
-bson
+pymongo=4.0
+bson==0.5.10

@@ -2,5 +2,3 @@ kafka-python
 aiokafka
 motor
 python-dotenv
-pymongo=4.0
-bson==0.5.10
