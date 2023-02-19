@@ -93,50 +93,50 @@
                       </div>
                     </div>
                     <div v-if="exhauster.danger_signals.length > 0" class="card-items">
-                        <div class="card-items-btn">
-                          <img
-                              v-if="!exhauster.btn_danger"
-                              src="@/assets/svg/btn/open.svg"
-                              @click="click_button(machine.id, exhauster.name, true)"
-                          >
-                          <img
-                              v-else src="@/assets/svg/btn/close.svg"
-                              @click="click_button(machine.id, exhauster.name, true)"
-                          >
-                        </div>
-                        <div class="card-items-title">
-                          <div class="card-items-title-text">Предупреждение</div>
-                        </div>
+                      <div class="card-items-btn">
+                        <img
+                            v-if="!exhauster.btn_danger"
+                            src="@/assets/svg/btn/open.svg"
+                            @click="click_button(machine.id, exhauster.name, true)"
+                        >
+                        <img
+                            v-else src="@/assets/svg/btn/close.svg"
+                            @click="click_button(machine.id, exhauster.name, true)"
+                        >
                       </div>
+                      <div class="card-items-title">
+                        <div class="card-items-title-text">Предупреждение</div>
+                      </div>
+                    </div>
                     <div v-if="exhauster.btn_danger && exhauster.danger_signals.length > 0" class="card-table">
-                        <div v-for="danger_signal in exhauster.danger_signals" class="card-table-item">
-                          <div class="card-table-coll-name">
-                            <div class="card-table-coll-name-text">{{ danger_signal.name }}</div>
-                          </div>
-                          <div class="card-table-coll-value">
-                            <div class="card-table-coll-value-frame">
-                              <div v-if="danger_signal.temp">
-                                <div :class="get_signal_class(danger_signal.temp.status)">
-                                  <div class="card-table-coll-value-frame-title">T</div>
-                                  <img src="@/assets/svg/signals/temp_normal.svg">
-                                </div>
+                      <div v-for="danger_signal in exhauster.danger_signals" class="card-table-item">
+                        <div class="card-table-coll-name">
+                          <div class="card-table-coll-name-text">{{ danger_signal.name }}</div>
+                        </div>
+                        <div class="card-table-coll-value">
+                          <div class="card-table-coll-value-frame">
+                            <div v-if="danger_signal.temp">
+                              <div :class="get_signal_class(danger_signal.temp.status)">
+                                <div class="card-table-coll-value-frame-title">T</div>
+                                <img src="@/assets/svg/signals/temp_normal.svg">
                               </div>
-                              <div v-if="danger_signal.vol">
-                                <div :class="get_signal_class(danger_signal.vol.status)">
-                                  <div class="card-table-coll-value-frame-title">V</div>
-                                  <img src="@/assets/svg/signals/temp_normal.svg">
-                                </div>
+                            </div>
+                            <div v-if="danger_signal.vibration">
+                              <div :class="get_signal_class(danger_signal.vibration.status)">
+                                <div class="card-table-coll-value-frame-title">V</div>
+                                <img src="@/assets/svg/signals/temp_normal.svg">
                               </div>
-                              <div v-if="danger_signal.oil">
-                                <div :class="get_signal_class(danger_signal.oil.status)">
-                                  <div class="card-table-coll-value-frame-title">V</div>
-                                  <img src="@/assets/svg/signals/temp_normal.svg">
-                                </div>
+                            </div>
+                            <div v-if="danger_signal.oil">
+                              <div :class="get_signal_class(danger_signal.oil.status)">
+                                <div class="card-table-coll-value-frame-title">V</div>
+                                <img src="@/assets/svg/signals/temp_normal.svg">
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
                     <div class="card-items">
                       <div class="card-items-btn">
                         <img
@@ -164,7 +164,7 @@
                               <div class="card-table-coll-value-frame-title">T</div>
                               <img src="@/assets/svg/signals/temp_normal.svg">
                             </div>
-                            <div v-if="signal.vol" class="card-table-coll-value-frame-normal">
+                            <div v-if="signal.vibration" class="card-table-coll-value-frame-normal">
                               <div class="card-table-coll-value-frame-title">V</div>
                               <img src="@/assets/svg/signals/temp_normal.svg">
                             </div>
@@ -201,172 +201,75 @@ export default {
   data() {
     return {
       title: 'Главный экран',
-      machines: [
-        {
-          id: 1,
-          exhausters: [
-            {
-              id: 1,
-              name: "У-171",
-              signals: [
-                {
-                  id: 1,
-                  name: "№1  п-к",
-                  temp: {
-                    value: 56,
-                    status: "normal",
-                  },
-                  vol: {
-                    value: 220,
-                    status: "normal",
-                  },
-                  oil: null
-                },
-                {
-                  id: 2,
-                  name: "№2  п-к",
-                  temp: {
-                    value: 56,
-                    status: "normal",
-                  },
-                  oil: null
-                },
-                {
-                  id: 10,
-                  name: "Уровень масла",
-                  oil: {
-                    value: 50,
-                    status: "normal"
-                  },
-                }
-              ],
-              danger_signals: [],
-              btn: false,
-              btn_danger: false,
-            },
-            {
-              id: 2,
-              name: "У-172",
-              signals: [
-                {
-                  id: 3,
-                  name: "№1  п-к",
-                  vol: {
-                    value: 220,
-                    status: "normal",
-                  },
-                  oil: null
-                }
-              ],
-              danger_signals: [
-                {
-                  id: 10,
-                  name: "Уровень масла",
-                  oil: {
-                    value: 50,
-                    status: "alarm"
-                  },
-                }
-              ],
-              btn: false,
-              btn_danger: false,
-            },
-          ],
-        },
-        {
-          id: 2,
-          exhausters: [
-            {
-              id: 3,
-              name: "У-173",
-              signals: [
-                {
-                  id: 4,
-                  name: "№1  п-к",
-                  temp: {
-                    value: 56,
-                    status: "warning",
-                  },
-                  vol: {
-                    value: 220,
-                    status: "normal",
-                  },
-                  oil: null
-                },
-              ],
-              danger_signals: [],
-              btn: false,
-              btn_danger: false,
-            },
-            {
-              id: 4,
-              name: "У-174",
-              signals: [
-                {
-                  id: 5,
-                  name: "№1  п-к",
-                  temp: {
-                    value: 56,
-                    status: "normal",
-                  },
-                  vol: {
-                    value: 220,
-                    status: "normal",
-                  },
-                  oil: null
-                },
-                {
-                  id: 6,
-                  name: "№2  п-к",
-                  vol: {
-                    value: 220,
-                    status: "normal",
-                  },
-                  oil: null
-                },
-              ],
-              danger_signals: [
-                {
-                  id: 4,
-                  name: "№3  п-к",
-                  temp: {
-                    value: 56,
-                    status: "warning",
-                  },
-                  vol: {
-                    value: 220,
-                    status: "normal",
-                  },
-                  oil: null
-                },
-                {
-                  id: 6,
-                  name: "№2  п-к",
-                  vol: {
-                    value: 220,
-                    status: "alarm",
-                  },
-                  oil: null
-                },
-              ],
-              btn: false,
-              btn_danger: false,
-            },
-          ],
-        },
-      ]
+      data: null,
+      machines: []
     }
   },
 
   created() {
-    console.log(this.$store.getters.getServerUrl)
+    this.data = this.loadExgausters();
+    console.log(this.data)
+  },
+
+  mounted() {
+    console.log(this.data)
   },
 
   methods: {
     async loadExgausters() {
       await axios
-          .get(`${this.$store.getters.getServerUrl}/exhausters/`)
-          .then(response => (this.exhausters = response.data));
+          .get(`${this.$store.getters.getServerUrl}/exgausters/`)
+          .then(
+              response => (this.data = response.data));
+      console.log(this.data)
+      this.parse_data(this.data)
+    },
+
+    parse_data(data) {
+      let machineNumber = 0;
+      let machine
+      for (let item of data) {
+        if (item.number % 2 !== 0) {
+          console.log(item.number)
+          machineNumber += 1;
+          machine = {id: machineNumber, exhausters: []};
+        }
+        let exhauster = {
+          id: item.number,
+          name: item.name,
+          signals: [],
+          danger_signals: [],
+          btn: false,
+          btn_danger: false,
+        }
+        for (let signal of item.bearings_big) {
+          let new_signal = {
+            id: signal.number,
+            name: "№ " + signal.number + " п-к",
+            temp: {
+              value: signal.temperature,
+              vibration: signal.vibration_axial
+            }
+          }
+          exhauster.signals.push(new_signal);
+        }
+
+        for (let signal of item.bearings_small) {
+          let new_signal = {
+            id: signal.number,
+            name: "№ " + signal.number + " п-к",
+            temp: {
+              value: signal.temperature,
+            }
+          }
+          exhauster.signals.push(new_signal)
+        }
+
+        machine.exhausters.push(exhauster)
+        if (item.number % 2 !== 0) {
+          this.machines.push(machine);
+        }
+      }
     },
 
     click_button(machine_id, exhauster_name, danger) {
@@ -387,8 +290,7 @@ export default {
 
     get_signal_class(status) {
       return "card-table-coll-value-frame-" + status
-    }
-
+    },
   },
 }
 </script>
