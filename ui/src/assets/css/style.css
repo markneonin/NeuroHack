@@ -1912,6 +1912,109 @@ body {
     top: -78%;
 }
 
+.cooler_value_in {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px;
+    gap: 10px;
+
+    position: absolute;
+    width: 60px;
+    height: 29px;
+    left: -5px;
+    top: -57px;
+
+    background: #414F4F;
+    border-radius: 4px;
+
+    flex: none;
+    order: 13;
+    flex-grow: 0;
+    z-index: 13;
+}
+
+.cooler_value_oot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px;
+    gap: 10px;
+
+    position: absolute;
+    width: 60px;
+    height: 29px;
+    right: 5px;
+    top: -57px;
+
+    background: #414F4F;
+    border-radius: 4px;
+
+    flex: none;
+    order: 13;
+    flex-grow: 0;
+    z-index: 13;
+}
+
+.cooler_value_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px;
+    gap: 10px;
+
+    position: absolute;
+    width: 60px;
+    height: 29px;
+    left: -48%;
+    top: 13px;
+
+    background: #414F4F;
+    border-radius: 4px;
+
+    flex: none;
+    order: 13;
+    flex-grow: 0;
+    z-index: 13;
+}
+
+.cooler_value_bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px;
+    gap: 10px;
+
+    position: absolute;
+    width: 60px;
+    height: 29px;
+    left: 33%;
+    bottom: -40px;
+
+    background: #414F4F;
+    border-radius: 4px;
+
+    flex: none;
+    order: 13;
+    flex-grow: 0;
+    z-index: 13;
+}
+
+.cooler_value_text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
 .oil_area {
     box-sizing: border-box;
 
