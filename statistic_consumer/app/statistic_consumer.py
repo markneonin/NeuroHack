@@ -116,7 +116,7 @@ async def consume():
             async for msg in consumer:
                 print(msg.offset)
                 tg.create_task(handle_message(msg.value, exgausters))
-                tg.create_task(parse_signals(msg = json.loads(msg.value.decode())))
+                tg.create_task(parse_signals(msg=json.loads(msg.value.decode())))
     finally:
         await consumer.stop()
 

@@ -7,4 +7,4 @@ RUN pip3 install -r requirements.txt
 
 ADD . /statistic_consumer
 
-CMD ["python3", "./app/statistic_consumer.py"]
+CMD ["/bin/bash", "-c", "python3 ./setup_mongo.py; python3 ./app/statistic_consumer.py"]
