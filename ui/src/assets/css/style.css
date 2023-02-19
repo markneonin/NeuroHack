@@ -879,8 +879,8 @@ body {
 
 .main-privod-down-line {
     position: absolute;
-    right: 25%;
-    bottom: -90%;
+    right: 20%;
+    bottom: -145.5%;
 }
 
 .main-to-cooler-line {
@@ -943,7 +943,7 @@ body {
     height: 21px;
     left: 35%;
     top: 20%;
-    background: #FCDBCB;
+    background: #FFF8EC;
 
     border: 2.16024px solid #F69112;
     border-radius: 4.32049px;
@@ -1003,7 +1003,7 @@ body {
     height: 21px;
     left: 35%;
     bottom: 20%;
-    background: #FCDBCB;
+    background: #FFF8EC;
 
     border: 2.16024px solid #F69112;
     border-radius: 4.32049px;
@@ -1078,7 +1078,7 @@ body {
     height: 21px;
     right: 8px;
     top: 8px;
-    background: #FCDBCB;
+    background: #FFF8EC;
 
     border: 2.16024px solid #F69112;
     border-radius: 4.32049px;
@@ -1138,7 +1138,7 @@ body {
     height: 21px;
     left: 8px;
     top: 8px;
-    background: #FCDBCB;
+    background: #FFF8EC;
 
     border: 2.16024px solid #F69112;
     border-radius: 4.32049px;
@@ -1198,7 +1198,7 @@ body {
     height: 21px;
     right: 8px;
     bottom: 8px;
-    background: #FCDBCB;
+    background: #FFF8EC;
 
     border: 2.16024px solid #F69112;
     border-radius: 4.32049px;
@@ -1258,7 +1258,7 @@ body {
     height: 21px;
     left: 8px;
     bottom: 8px;
-    background: #FCDBCB;
+    background: #FFF8EC;
 
     border: 2.16024px solid #F69112;
     border-radius: 4.32049px;
@@ -1341,8 +1341,8 @@ body {
 
 .rotor-to-main-line {
     position: absolute;
-    left: 45%;
-    bottom: -85%;
+    left: 50%;
+    bottom: -105%;
 }
 
 .reductor-frame-left-top {
@@ -1403,8 +1403,8 @@ body {
     align-items: center;
     padding: 0;
 
-    width: 100px;
-    height: 67px;
+    width: 110px;
+    min-height: 67px;
 
     background: #414F4F;
     border-radius: 10px;
@@ -1413,6 +1413,158 @@ body {
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+}
+
+.frame_select {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 10px 5px;
+
+    height: 36px;
+
+    border-radius: 10px 10px 0px 0px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.frame_title {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2px 0px;
+
+    height: 21px;
+
+    border: 1px solid #8D9595;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.frame_title_text {
+    margin: 0 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.frame-dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2px 10px 10px;
+
+    border-radius: 0px 0px 10px 10px;
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.frame-table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.frame-table-normal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2px 5px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.frame-table-warning {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2px 5px;
+
+    background: #FAB82E;
+    border-radius: 4px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.frame-table-alarm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2px 5px;
+
+    background: #EB5835;
+    border-radius: 4px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.frame-table-key {
+    font-style: normal;
+    font-weight: 375;
+    font-size: 13px;
+    line-height: 15px;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.frame-table-value {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
 }
 
 .gaz-block {
@@ -1600,6 +1752,105 @@ body {
 
     flex: none;
     order: 1;
+    flex-grow: 0;
+}
+
+.gaz_table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 3px;
+
+    width: 159px;
+    height: 43px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.gaz_table_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 159px;
+    height: 20px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.gaz_table_text_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.gaz_table_text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    color: #ffffff;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.gaz_table_value_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 6px;
+    gap: 10px;
+
+    width: 33px;
+    height: 20px;
+
+    background: #414F4F;
+    border-radius: 4px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.gaz_table_value {
+    width: 21px;
+    height: 14px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
     flex-grow: 0;
 }
 
