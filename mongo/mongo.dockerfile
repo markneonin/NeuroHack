@@ -1,20 +1,17 @@
 FROM mongo
 
+COPY insert.py /docker-entrypoint-initdb.d/
+COPY requirements.txt /tmp/requirements.txt
 
-RUN apt-get update && \
-    apt-get install -y gnupg python3 python3-pip && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-
-COPY requirements.txt /requirements.txt
-RUN pip3 install -r /requirements.txt
-
-COPY setup_mongo.py /insert.py
-RUN python3 /insert.py
+RUN apt-get update \
+    && apt-get install -y python3 python3-pip \
+    && python3 -m pip install -r /tmp/requirements.txt \
+    && rm /tmp/requirements.txt
 
 
 ENV MONGO_INITDB_ROOT_USERNAME=user
 ENV MONGO_INITDB_ROOT_PASSWORD=password
 
 EXPOSE 27017
+
+CMD ["python3", "/docker-entrypoint-initdb.d/setup_mongo.py"]
