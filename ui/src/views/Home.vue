@@ -208,11 +208,6 @@ export default {
 
   created() {
     this.data = this.loadExgausters();
-    console.log(this.data)
-  },
-
-  mounted() {
-    console.log(this.data)
   },
 
   methods: {
@@ -248,11 +243,23 @@ export default {
             name: "№ " + signal.number + " п-к",
             temp: {
               value: signal.temperature,
-              vibration: signal.vibration_axial
+              status: "normal"
+            },
+            vibration: {
+              value: signal.vibration_axial,
+              status: "normal"
             }
           }
           exhauster.signals.push(new_signal);
         }
+        let new_signal = {
+          name: "Уровень масла",
+          oil: {
+            value: item.oil_system,
+            status: "normal"
+          }
+        }
+        exhauster.signals.push(new_signal);
 
         for (let signal of item.bearings_small) {
           let new_signal = {
