@@ -16,7 +16,8 @@ const routes = [
   {
     path: '/:id',
     name: 'Exhauster',
-    component: Exhauster
+    component: Exhauster,
+    props: true,
   }
 ]
 
