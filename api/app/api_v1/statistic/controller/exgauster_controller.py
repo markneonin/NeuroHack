@@ -11,5 +11,13 @@ async def get_exgausters(
         service: ExgausterService = Depends()
 
 ) -> list[schema.Exgauster]:
-
     return await service.get_exgausters()
+
+
+@exgauster_router.get('/{number}')
+async def get_exgauster(
+        number: int,
+        service: ExgausterService = Depends(),
+
+) -> schema.Exgauster:
+    return await service.get_exgauster(number)

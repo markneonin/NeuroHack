@@ -46,6 +46,11 @@ class MongoManager:
 
         return result
 
+    async def get_exgauster(self, number):
+        exgauster = await self.db.exgauster.find_one({'number': number})
+        result = await self._load_exgauster_components(exgauster)
+        return result
+
     async def get_exgausters(self):
         exgausters_q = self.db.exgauster.find()
         exgausters = await asyncio.gather(*(
@@ -53,7 +58,6 @@ class MongoManager:
             for exgauster in await exgausters_q.to_list(length=100)
         ))
         return exgausters
-
 
 
 db = MongoManager()
