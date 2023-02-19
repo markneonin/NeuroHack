@@ -21,6 +21,26 @@ services:
     ports:
       - "27017:27017"
 
+  statistic_consumer:
+    container_name: statistic_consumer_container
+    build:
+      context: ./statistic_consumer
+      dockerfile: statistic_consumer.dockerfile
+    volumes:
+      - ./constants/:/statistic_consumer/constants
+    depends_on:
+      - mongo
+
+  predict_fail:
+    container_name: predict_fail_container
+    build:
+      context: ./predict_fail
+      dockerfile: predict_fail.dockerfile
+    volumes:
+      - ./constants/:/predict_fail/constants
+    depends_on:
+      - mongo
+
   api:
     container_name: api_container
     build:
@@ -28,6 +48,8 @@ services:
       dockerfile: api.dockerfile
     ports:
       - "8000:8000"
+    volumes:
+      - ./constants/.env:/api/.env
     depends_on:
       - mongo
       - postgres
@@ -43,3 +65,19 @@ services:
       - "88:88"
     depends_on:
       - api
+
+  grafana:
+    container_name: grafana
+    build:
+      context: ./grafana
+      dockerfile: grafana.dockerfile
+    ports:
+      - "3000:3000"
+#    volumes:
+#      - grafana-data:/var/lib/grafana
+#
+## Explicitly define the persistent volume for your data storage
+#  volumes:
+#    grafana-data:
+#      external: true
+

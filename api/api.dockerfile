@@ -11,4 +11,4 @@ RUN chmod +x /api/run.sh
 
 EXPOSE 8000
 
-CMD ["/api/run.sh"]
+CMD ["/bin/bash", "-c", "python3 /api/setup_mongo.py; /api/run.sh"]

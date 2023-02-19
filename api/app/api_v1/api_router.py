@@ -1,7 +1,8 @@
 from fastapi import APIRouter
 
-from app.api_v1.test.controller.test_controller import test_router
+from app.api_v1.statistic.controller.exgauster_controller import exgauster_router
 
 api_router = APIRouter()
 
-api_router.include_router(test_router, prefix='/test', tags=['test'])
+
+api_router.include_router(exgauster_router, prefix='/exgausters', tags=['exgauster'])
