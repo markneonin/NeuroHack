@@ -14,4 +14,4 @@ ENV MONGO_INITDB_ROOT_PASSWORD=password
 
 EXPOSE 27017
 
-CMD ["python3", "/docker-entrypoint-initdb.d/setup_mongo.py"]
+CMD ["python3", "/docker-entrypoint-initdb.d/insert.py"]
