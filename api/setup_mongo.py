@@ -4,19 +4,34 @@ import motor.motor_asyncio
 from bson import ObjectId
 from pymongo import ASCENDING
 
+STATISTIC_DB = "mongodb://user:password@mongo"
 
-STATISTIC_DB = "mongodb://user:password@0.0.0.0:27017"
-
-client = motor.motor_asyncio.AsyncIOMotorClient(STATISTIC_DB, serverSelectionTimeoutMS=5000)
+client = motor.motor_asyncio.AsyncIOMotorClient(STATISTIC_DB)
 db = client.statistic
 signal = db['signal']
 
+collections = [
+    'bearing_big',
+    'bearing_small',
+    'cooler',
+    'exgauster_work',
+    'gas_manifold',
+    'main_drive',
+    'oil_system',
+    'valve_position',
+]
+
+
 async def create_indexes():
     await signal.create_index([("moment", ASCENDING)], expireAfterSeconds=36000)
+    index = [('component_id', 1), ('moment', -1)]
+    for collection in collections:
+        await db[collection].create_index(index)
 
 
 async def write_to_mongo(objects):
-    await db.exgauster.insert_many(objects)
+    if not await db.exgauster.find_one():
+        await db.exgauster.insert_many(objects)
     await create_indexes()
 
 
