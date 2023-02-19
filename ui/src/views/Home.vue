@@ -55,7 +55,9 @@
                       <div class="card-title-text">Эксгаустер {{ exhauster.name }}</div>
                     </div>
                     <div class="card-title-button">
-                      <img src="@/assets/svg/exhauster_btn.svg">
+                      <a :href="exhauster.id">
+                        <img src="@/assets/svg/exhauster_btn.svg">
+                      </a>
                     </div>
                   </div>
                   <div class="card-content">
@@ -204,6 +206,7 @@ export default {
           id: 1,
           exhausters: [
             {
+              id: 1,
               name: "У-171",
               signals: [
                 {
@@ -242,6 +245,7 @@ export default {
               btn_danger: false,
             },
             {
+              id: 2,
               name: "У-172",
               signals: [
                 {
@@ -273,6 +277,7 @@ export default {
           id: 2,
           exhausters: [
             {
+              id: 3,
               name: "У-173",
               signals: [
                 {
@@ -294,6 +299,7 @@ export default {
               btn_danger: false,
             },
             {
+              id: 4,
               name: "У-174",
               signals: [
                 {
