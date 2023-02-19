@@ -2440,3 +2440,27 @@ body {
     left: 40%;
     bottom: -70px;
 }
+
+.damper0 {
+    position: absolute;
+    width: 117px;
+    height: 34px;
+    bottom: 20px;
+    right: 16px;
+}
+
+.damper50 {
+    position: absolute;
+    width: 117px;
+    height: 34px;
+    bottom: 20px;
+    right: -25px;
+}
+
+.damper100 {
+    position: absolute;
+    width: 117px;
+    height: 34px;
+    bottom: 20px;
+    right: -60px;
+}
