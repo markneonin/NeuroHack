@@ -217,7 +217,6 @@ export default {
           .get(`${this.$store.getters.getServerUrl}/exgausters/`)
           .then(
               response => (this.data = response.data));
-      console.log(this.data)
       this.parse_data(this.data)
     },
 
