@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Any
+from typing import Any, Optional
 
 from bson import ObjectId
 from pydantic import BaseModel
@@ -18,49 +18,49 @@ class Value(BaseModel):
 
 class BearingBig(BaseModel):
     number: int
-    temperature: float
-    vibration_axial: float
-    vibration_vertical: float
-    vibration_horizontal: float
+    temperature: Optional[float]
+    vibration_axial: Optional[float]
+    vibration_vertical: Optional[float]
+    vibration_horizontal: Optional[float]
 
 
 class BearingSmall(BaseModel):
     number: int
-    temperature: float
+    temperature: Optional[float]
 
 
 class Cooler(BaseModel):
-    water_temperature_before: float
-    water_temperature_after: float
-    oil_temperature_before: float
-    oil_temperature_after: float
+    water_temperature_before: Optional[float]
+    water_temperature_after: Optional[float]
+    oil_temperature_before: Optional[float]
+    oil_temperature_after: Optional[float]
 
 
 class GasManifold(BaseModel):
-    temperature_before: float
-    underpressure_before: float
+    temperature_before: Optional[float]
+    underpressure_before: Optional[float]
 
 
 class ValvePosition(BaseModel):
-    gas_valve_closed: float
-    gas_valve_open: float
-    gas_valve_position: float
+    gas_valve_closed: Optional[float]
+    gas_valve_open: Optional[float]
+    gas_valve_position: Optional[float]
 
 
 class MainDrive(BaseModel):
-    rotor_current: float
-    rotor_voltage: float
-    stator_current: float
-    stator_voltage: float
+    rotor_current: Optional[float]
+    rotor_voltage: Optional[float]
+    stator_current: Optional[float]
+    stator_voltage: Optional[float]
 
 
 class OilSystem(BaseModel):
-    oil_level: float
-    oil_pressure: float
+    oil_level: Optional[float]
+    oil_pressure: Optional[float]
 
 
 class ExgausterWork(BaseModel):
-    work: float
+    work: Optional[float]
 
 
 class Exgauster(BaseModel):
@@ -75,17 +75,3 @@ class Exgauster(BaseModel):
     oil_system: OilSystem
     exgauster_work: ExgausterWork
 
-
-exg = {
-    'number': 1,
-    'name': 'У-171',
-    'bearings_big': [ObjectId(), ObjectId()],
-    'bearings_small': [ObjectId(), ObjectId()],
-    'cooler': ObjectId(),
-    'gas_manifold': ObjectId(),
-    'valve_position': ObjectId(),
-    'main_drive': ObjectId(),
-    'oil_system': ObjectId(),
-    'exgauster_work': ObjectId(),
-
-}

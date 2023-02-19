@@ -7,4 +7,5 @@ class ExgausterService:
 
     async def get_exgausters(self):
         exgausters = await db.get_exgausters()
+        return exgausters
 
