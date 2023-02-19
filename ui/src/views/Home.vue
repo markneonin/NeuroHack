@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <main-header></main-header>
-    <div class="container components flex-column-start">
+    <div class="components flex-column-start">
       <div class="section flex-column-start">
         <div class="header flex-row-center">
           <div class="icon flex-row-center">
@@ -395,7 +395,7 @@ export default {
   align-items: flex-start;
   padding: 10px;
 
-  width: 620px;
+  width: 650px;
 
   flex: none;
   order: 0;
