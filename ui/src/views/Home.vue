@@ -51,7 +51,8 @@
                 <div v-for="exhauster in machine.exhausters" class="card">
                   <div class="card-header">
                     <div class="card-title">
-                      <img src="@/assets/svg/red_circle.svg">
+                      <img v-if="exhauster.status === 'normal'" src="@/assets/svg/green_circle.svg">
+                      <img v-else src="@/assets/svg/red_circle.svg">
                       <div class="card-title-text">Эксгаустер {{ exhauster.name }}</div>
                     </div>
                     <div class="card-title-button">
@@ -231,6 +232,7 @@ export default {
         }
         let exhauster = {
           id: item.number,
+          status: "normal",
           name: item.name,
           signals: [],
           danger_signals: [],
