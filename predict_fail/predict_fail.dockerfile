@@ -1,6 +1,6 @@
 FROM python:3.11-slim-buster
 
-WORKDIR /statistic_consumer
+WORKDIR /predict_fail
 
 COPY requirements.txt /predict_fail
 RUN pip3 install -r requirements.txt
