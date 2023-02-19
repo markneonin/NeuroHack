@@ -18,7 +18,7 @@
           </div>
           <div class="header-text">Эксгаустер {{ exhauster.name }}</div>
         </div>
-        <schema v-if="mode === 'schema'"></schema>
+        <schema v-if="mode === 'schema'" :data="exhauster"></schema>
         <threads v-if="mode === 'threads'"></threads>
       </div>
     </div>
@@ -34,53 +34,29 @@ import threads from "../components/threads"
 export default {
   name: "Exhauster",
   components: {mainHeader, Schema, threads},
-  props: ['id', 'data'],
+  props: {
+    id: Number
+  },
 
   data() {
     return {
       mode: 'schema',
-      exhauster: {
-        name: "У-171",
-        signals: [
-          {
-            id: 1,
-            name: "№1  п-к",
-            temp: {
-              value: 56,
-              status: "normal",
-            },
-            vol: {
-              value: 220,
-              status: "normal",
-            },
-            oil: null
-          },
-          {
-            id: 2,
-            name: "№2  п-к",
-            temp: {
-              value: 56,
-              status: "normal",
-            },
-            oil: null
-          },
-          {
-            id: 10,
-            name: "Уровень масла",
-            oil: {
-              value: 50,
-              status: "normal"
-            },
-          }
-        ],
-        danger_signals: [],
-        btn: false,
-        btn_danger: false,
-      },
+      exhauster: {},
     }
   },
 
-  methods:{
+  created() {
+    this.loadExgausters()
+  },
+
+  methods: {
+    async loadExgausters() {
+      await axios
+          .get(`${this.$store.getters.getServerUrl}/exgausters/${this.id}`)
+          .then(
+              response => (this.exhauster = response.data));
+    },
+
     getTitle() {
       return " / Состояние эксгаустера " + this.exhauster.name
     }
