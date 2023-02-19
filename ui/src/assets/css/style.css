@@ -874,13 +874,60 @@ body {
     width: 232px;
     height: 150px;
     left: 870px;
-    top: 290px;
+    top: 271px;
 }
 
 .main-privod-down-line {
     position: absolute;
     right: 20%;
-    bottom: -145.5%;
+    bottom: -158%;
+}
+
+.main-privod-v-rotor-section {
+    position: absolute;
+    right: 4.4%;
+    bottom: 20%;
+}
+
+.main-privod-v-stater-section {
+    position: absolute;
+    right: 4.4%;
+    bottom: 5%;
+}
+
+.main-privod-v-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 6px;
+    gap: 10px;
+
+    width: 34px;
+    height: 20px;
+
+    background: #414F4F;
+    border-radius: 4px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.main-privod-v-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .main-to-cooler-line {
@@ -1335,7 +1382,7 @@ body {
 
 .reductor-to-oil-line {
     position: absolute;
-    left: 45%;
+    left: 50%;
     top: -85%;
 }
 
@@ -1804,7 +1851,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
+    padding: 0;
     gap: 10px;
 
     color: #ffffff;
@@ -1823,7 +1870,6 @@ body {
     padding: 3px 6px;
     gap: 10px;
 
-    width: 33px;
     height: 20px;
 
     background: #414F4F;
@@ -1835,7 +1881,6 @@ body {
 }
 
 .gaz_table_value {
-    width: 21px;
     height: 14px;
 
     font-style: normal;
