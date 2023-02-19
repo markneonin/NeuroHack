@@ -61,8 +61,8 @@
           <div class="oil_frame_info">
             <div class="oil_chart">
               <div class="oil_chart_info">
-                <div class="oil_chart_alarm">
-                  <div class="oil_chart_value">34,3</div>
+                <div class="oil_chart_normal">
+                  <div class="oil_chart_value">{{ Math.ceil((data.oil_system.oil_level)*100)/100 }}</div>
                 </div>
               </div>
             </div>
@@ -83,7 +83,9 @@
                 <div class="gaz_info_temp_list_chart">
                   <div class="gaz_info_temp_list_frame">
                     <div class="gaz_info_normal">
-                      <div class="gaz_info_t">45</div>
+                      <div class="gaz_info_t">
+                        {{ Math.ceil((data.gas_manifold.temperature_before)*100)/100 }}
+                      </div>
                       <div class="gaz_info_desc">Температура газа,°C</div>
                     </div>
                   </div>
@@ -96,7 +98,9 @@
                   <div class="gaz_table_text">Разряжение</div>
                 </div>
                 <div class="gaz_table_value_block">
-                  <div class="gaz_table_value">74,3</div>
+                  <div class="gaz_table_value">
+                    {{ Math.ceil((data.gas_manifold.underpressure_before)*100)/100 }}
+                  </div>
                 </div>
               </div>
               <div class="gaz_table_item">
@@ -113,8 +117,14 @@
         </div>
         <div class="gaz-down-section">
           <img src="@/assets/svg/machine/gaz-down.svg">
-          <div class="damper50">
+          <div v-if="data.valve_position.gas_valve_closed == 1" class="damper0">
+            <img src="@/assets/svg/machine/damper0.svg">
+          </div>
+          <div v-if="data.valve_position.gas_valve_position == 1" class="damper50">
             <img src="@/assets/svg/machine/damper50.svg">
+          </div>
+          <div v-if="data.valve_position.gas_valve_open == 1" class="damper100">
+            <img src="@/assets/svg/machine/damper100.svg">
           </div>
         </div>
         <img src="@/assets/svg/machine/gaz.svg">
@@ -507,7 +517,9 @@
           <div class="oil_chart">
             <div class="oil_chart_info">
               <div class="oil_pressure_chart_warning">
-                <div class="oil_chart_value">2,5</div>
+                <div class="oil_chart_value">
+                  {{ Math.ceil(data.oil_system.oil_pressure * 100)/100 }}
+                </div>
               </div>
             </div>
           </div>
