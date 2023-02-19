@@ -355,6 +355,22 @@
           <img src="@/assets/svg/machine/main-to-coler-line.svg">
         </div>
         <img src="@/assets/svg/machine/main-block.svg">
+        <div class="main-privod-v-rotor-section">
+          <div class="main-privod-v-area">
+            <div v-if="data.main_drive.rotor_voltage" class="main-privod-v-text">
+              {{ Math.ceil((data.main_drive.rotor_voltage)*100)/100. }}
+            </div>
+            <div v-else class="main-privod-v-text">-</div>
+          </div>
+        </div>
+        <div class="main-privod-v-stater-section">
+          <div class="main-privod-v-area">
+            <div v-if="data.main_drive.stator_voltage" class="main-privod-v-text">
+              {{ Math.ceil((data.main_drive.stator_voltage)*100)/100. }}
+            </div>
+            <div v-else class="main-privod-v-text">-</div>
+          </div>
+        </div>
       </div>
       <div class="group-pk-7">
         <img src="@/assets/svg/machine/pk.svg">

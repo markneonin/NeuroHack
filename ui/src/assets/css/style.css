@@ -883,6 +883,53 @@ body {
     bottom: -158%;
 }
 
+.main-privod-v-rotor-section {
+    position: absolute;
+    right: 4.4%;
+    bottom: 20%;
+}
+
+.main-privod-v-stater-section {
+    position: absolute;
+    right: 4.4%;
+    bottom: 5%;
+}
+
+.main-privod-v-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 6px;
+    gap: 10px;
+
+    width: 34px;
+    height: 20px;
+
+    background: #414F4F;
+    border-radius: 4px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.main-privod-v-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
 .main-to-cooler-line {
     position: absolute;
     right: 25%;
