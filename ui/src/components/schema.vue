@@ -216,18 +216,7 @@
       </div>
       <div class="reductor">
         <div class="reductor-to-oil-line">
-          <svg width="40" height="201" viewBox="0 0 40 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M0.638183 5.57385C0.638183 2.53629 3.10062 0.0738528 6.13818 0.073853L12.6382 0.0738536L12.6382 9.07385L0.638183 9.07385L0.638183 5.57385V5.57385Z"
-                fill="#677272"/>
-            <path
-                d="M3.63623 6.07526C3.63623 4.4184 4.97938 3.07526 6.63623 3.07526L12.6362 3.07526L12.6362 6.07526L3.63623 6.07526V6.07526Z"
-                fill="white"/>
-            <rect x="11.6382" y="0.0738525" width="28.1875" height="9" fill="#677272"/>
-            <rect x="11.6382" y="3.07385" width="28.1875" height="3" fill="white"/>
-            <rect width="9" height="191.021" transform="matrix(-1 0 0 1 9.63818 9.0553)" fill="#677272"/>
-            <rect width="3" height="194.642" transform="matrix(-1 0 0 1 6.63818 5.43518)" fill="white"/>
-          </svg>
+          <img src="@/assets/svg/machine/reductor-to-oil.svg">
         </div>
         <div class="rotor-to-main-line">
           <img src="@/assets/svg/machine/rotor-to-main-line.svg">
@@ -423,27 +412,10 @@
           <div class="pk-text">8</div>
         </div>
         <div class="line_bottom-89">
-          <svg width="57" height="38" viewBox="0 0 57 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M56.6472 32.077C56.6472 35.1146 54.1848 37.577 51.1472 37.577H44.6472V28.577H56.6472V32.077V32.077Z"
-                fill="#677272"/>
-            <path d="M53.6451 31.5714C53.6451 33.2282 52.302 34.5714 50.6451 34.5714H44.6451V31.5714H53.6451V31.5714Z"
-                  fill="white"/>
-            <rect x="49.9888" y="28.577" width="9" height="49.2014" transform="rotate(90 49.9888 28.577)"
-                  fill="#677272"/>
-            <rect x="50.3455" y="31.5773" width="3" height="50.3456" transform="rotate(90 50.3455 31.5773)"
-                  fill="white"/>
-            <rect x="48.0095" y="0.0743103" width="8.63751" height="31.0099" fill="#677272"/>
-            <rect x="50.8903" y="0.0743103" width="2.87917" height="31.503" fill="white"/>
-          </svg>
+          <img src="@/assets/svg/machine/line89.svg">
         </div>
         <div class="line_left-89">
-          <svg width="43" height="10" viewBox="0 0 43 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="42.8259" y="0.228638" width="9" height="42.0227" transform="rotate(90 42.8259 0.228638)"
-                  fill="#677272"/>
-            <rect x="42.8259" y="3.22888" width="3" height="41.6953" transform="rotate(90 42.8259 3.22888)"
-                  fill="white"/>
-          </svg>
+          <img src="@/assets/svg/machine/line-left89.svg">
         </div>
         <div class="frame8">
           <div class="frame-params">
