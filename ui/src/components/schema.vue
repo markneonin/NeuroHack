@@ -19,16 +19,16 @@
           <img src="@/assets/svg/machine/cooler-out.svg">
         </div>
         <div class="cooler_value_oot">
-          <div class="cooler_value_text">-233°С</div>
+          <div class="cooler_value_text">{{ Math.ceil((data.cooler.oil_temperature_after)*100)/100 }} °С</div>
         </div>
         <div class="cooler_value_in">
-          <div class="cooler_value_text">-233°С</div>
+          <div class="cooler_value_text">{{ Math.ceil((data.cooler.oil_temperature_before)*100)/100 }} °С</div>
         </div>
         <div class="cooler_value_left">
-          <div class="cooler_value_text">-233°С</div>
+          <div class="cooler_value_text">{{ Math.ceil((data.cooler.oil_temperature_after)*100)/100 }} °С</div>
         </div>
         <div class="cooler_value_bottom">
-          <div class="cooler_value_text">-233°С</div>
+          <div class="cooler_value_text">{{ Math.ceil((data.cooler.water_temperature_before)*100)/100 }} °С</div>
         </div>
       </div>
       <div class="oil_area">
@@ -141,19 +141,27 @@
               <div class="frame-table">
                 <div class="frame-table-normal">
                   <div class="frame-table-key">T,°С</div>
-                  <div class="frame-table-value">220</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getTemperatureInBearingsBig('1'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">В,мм/с</div>
-                  <div class="frame-table-value">8</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalInBearingsBig('1'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">Г,мм/с</div>
-                  <div class="frame-table-value">00</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalHorizontalInBearingsBig('1'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">O,мм/с</div>
-                  <div class="frame-table-value">00</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalAxialInBearingsBig('1'))*100)/100 }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -179,19 +187,27 @@
               <div class="frame-table">
                 <div class="frame-table-normal">
                   <div class="frame-table-key">T,°С</div>
-                  <div class="frame-table-value">220</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getTemperatureInBearingsBig('2'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">В,мм/с</div>
-                  <div class="frame-table-value">8</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalInBearingsBig('2'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">Г,мм/с</div>
-                  <div class="frame-table-value">00</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalHorizontalInBearingsBig('2'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">O,мм/с</div>
-                  <div class="frame-table-value">00</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalAxialInBearingsBig('2'))*100)/100 }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -227,7 +243,9 @@
               <div class="frame-table">
                 <div class="frame-table-normal">
                   <div class="frame-table-key">T,°С</div>
-                  <div class="frame-table-value">220</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getTemperatureInBearingsSmall('4'))*100)/100 }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -247,7 +265,9 @@
               <div class="frame-table">
                 <div class="frame-table-warning">
                   <div class="frame-table-key">T,°С</div>
-                  <div class="frame-table-value">220</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getTemperatureInBearingsSmall('5'))*100)/100 }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -269,7 +289,9 @@
                   <div class="frame-table">
                     <div class="frame-table-normal">
                       <div class="frame-table-key">T,°С</div>
-                      <div class="frame-table-value">220</div>
+                      <div class="frame-table-value">
+                        {{ Math.ceil((getTemperatureInBearingsSmall('6'))*100)/100 }}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -291,7 +313,9 @@
               <div class="frame-table">
                 <div class="frame-table-alarm">
                   <div class="frame-table-key">T,°С</div>
-                  <div class="frame-table-value">220</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getTemperatureInBearingsSmall('3'))*100)/100 }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -362,19 +386,27 @@
                 <div class="frame-table">
                   <div class="frame-table-normal">
                     <div class="frame-table-key">T,°С</div>
-                    <div class="frame-table-value">220</div>
+                    <div class="frame-table-value">
+                      {{ Math.ceil((getTemperatureInBearingsBig('7'))*100)/100 }}
+                    </div>
                   </div>
                   <div class="frame-table-normal">
                     <div class="frame-table-key">В,мм/с</div>
-                    <div class="frame-table-value">8</div>
+                    <div class="frame-table-value">
+                      {{ Math.ceil((getVibrationVerticalInBearingsBig('7'))*100)/100 }}
+                    </div>
                   </div>
                   <div class="frame-table-normal">
                     <div class="frame-table-key">Г,мм/с</div>
-                    <div class="frame-table-value">00</div>
+                    <div class="frame-table-value">
+                      {{ Math.ceil((getVibrationVerticalHorizontalInBearingsBig('7'))*100)/100 }}
+                    </div>
                   </div>
                   <div class="frame-table-normal">
                     <div class="frame-table-key">O,мм/с</div>
-                    <div class="frame-table-value">00</div>
+                    <div class="frame-table-value">
+                      {{ Math.ceil((getVibrationVerticalAxialInBearingsBig('7'))*100)/100 }}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -424,19 +456,27 @@
               <div class="frame-table">
                 <div class="frame-table-normal">
                   <div class="frame-table-key">T,°С</div>
-                  <div class="frame-table-value">220</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getTemperatureInBearingsBig('8'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">В,мм/с</div>
-                  <div class="frame-table-value">8</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalInBearingsBig('8'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">Г,мм/с</div>
-                  <div class="frame-table-value">00</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalHorizontalInBearingsBig('8'))*100)/100 }}
+                  </div>
                 </div>
                 <div class="frame-table-normal">
                   <div class="frame-table-key">O,мм/с</div>
-                  <div class="frame-table-value">00</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getVibrationVerticalAxialInBearingsBig('8'))*100)/100 }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -453,7 +493,9 @@
               <div class="frame-table">
                 <div class="frame-table-warning">
                   <div class="frame-table-key">T,°С</div>
-                  <div class="frame-table-value">220</div>
+                  <div class="frame-table-value">
+                    {{ Math.ceil((getTemperatureInBearingsSmall('9'))*100)/100 }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -514,7 +556,50 @@
 <script>
 export default {
   name: "Schema",
-  props: ['data']
+
+  props: ['data'],
+
+  methods: {
+    getTemperatureInBearingsBig(id) {
+      for (let bear of this.data.bearings_big) {
+        if (bear.number == id ) {
+          return bear.temperature
+        }
+      }
+    },
+
+    getTemperatureInBearingsSmall(id) {
+      for (let bear of this.data.bearings_small) {
+        if (bear.number == id ) {
+          return bear.temperature
+        }
+      }
+    },
+
+    getVibrationVerticalInBearingsBig(id) {
+      for (let bear of this.data.bearings_big) {
+        if (bear.number == id ) {
+          return bear.temperature
+        }
+      }
+    },
+
+    getVibrationVerticalHorizontalInBearingsBig(id) {
+      for (let bear of this.data.bearings_big) {
+        if (bear.number == id ) {
+          return bear.vibration_horizontal
+        }
+      }
+    },
+
+    getVibrationVerticalAxialInBearingsBig(id) {
+      for (let bear of this.data.bearings_big) {
+        if (bear.number == id ) {
+          return bear.vibration_axial
+        }
+      }
+    },
+  }
 }
 </script>
 
